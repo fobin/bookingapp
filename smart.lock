@@ -1,0 +1,21 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "parsleyjs": {},
+      "bootstrap-3": {}
+    },
+    "packages": {
+      "parsleyjs": {
+        "git": "https://github.com/nate-strauser/meteor-parsleyjs.git",
+        "tag": "v1.1.7",
+        "commit": "035a1e56a78e50369686b7e281aa71e3daf3729a"
+      },
+      "bootstrap-3": {
+        "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
+        "tag": "v0.3.7",
+        "commit": "5dd0d142c870647b910be80bc777b96f0dd45e5e"
+      }
+    }
+  }
+}

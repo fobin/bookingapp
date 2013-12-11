@@ -1,0 +1,84 @@
+<head>
+  <title>Booking app</title>
+</head>
+
+<body>
+<div class="container">
+  {{> hello}}
+  {{> courses}} 
+</div>
+</body>
+
+<template name="hello">
+  <div class="row">
+  	<div class="col-md-12">
+  		<h1>Hello {{currentUser}}</h1>
+  		<p>{{greeting}}</p>
+  	</div>
+  </div>
+  <div class="row">
+  	<div class="col-md-12">
+	  <form role="form" action="" parsley-validate>
+	  	<fieldset>
+	  		<legend>Define your new event</legend>
+				<div class="row">
+			  		<div class="col-md-12">
+			  			<div class="form-group">
+			  				<input class="form-control" type="text" placeholder="Event name" name="" id="course_name" required>
+			  			</div>
+			  		</div>
+			  		<div class="col-md-4">
+			  			<div class="form-group">
+			  				<input type="date" id="start_date" class="form-control" placeholder="Start date" required>
+			  			</div>
+			  		</div>
+			  		<div class="col-md-4">
+			  			<div class="form-group">
+			  				<input type="time" id="start_time" class="form-control" placeholder="Start time" required>
+			  			</div>
+			  		</div>
+			  		<div class="col-md-4">
+			  			<div class="form-group">
+			  				<input type="time" id="end_time" class="form-control" placeholder="End time" required>
+			  			</div>
+			  		</div>
+			  		<div class="col-md-12">
+			  			<div class="form-group">
+			  				<input type="submit" class="form-control btn btn-primary submit" value="Save your event">
+			  			</div>
+			  		</div>
+				  	
+			  	</div>
+	  	</fieldset>
+	  </form>
+	</div>
+  </div>
+  <div class="events">
+
+  </div>
+</template>
+
+<template name="courses">
+ <table class="table">
+ <thead>
+ 	<tr>
+		<th>Course name</th>
+		<th>Start date</th>
+		<th>Start time</th>
+		<th>End time</th>
+		<th>Delete event</th>
+	</tr>
+ </thead>
+ <tbody>
+ {{#each courses}}
+ <tr>
+	 <td>{{course_name}} </td>
+	 <td>{{start_date}}</td> 
+	 <td>{{start_time}}</td>
+	 <td>{{end_time}}</td>
+	 <td><button class="delete btn btn-warning" id="{{_id}}">Delete</button></td>
+ </tr>
+{{/each}}
+</tbody>
+</table>
+</template>
