@@ -9,7 +9,7 @@ if (Meteor.isClient) {
 
   var AllCourses = function() {
     Courses.find({});
-  }
+  };
 
   Template.hello.rendered = function () {
 
